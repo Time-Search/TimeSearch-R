@@ -1,0 +1,11 @@
+datasets:
+  - json_path: workdir/datasets/LongVideoHaystack/train_pred_acc1_posthoc_acc1_thumbnail_acc0_mc.jsonl
+    sampling_strategy: random:1500
+  - json_path: workdir/datasets/LongVideoHaystack/train_pred_acc1_posthoc_acc1_thumbnail_acc1_oe.jsonl
+    sampling_strategy: random:1500
+  - json_path: workdir/datasets/falcon/mc_converted_rl.jsonl
+    sampling_strategy: all
+  - json_path: workdir/datasets/cinepile/0000_pred_posthoc_acc1.jsonl
+    sampling_strategy: all
+  - json_path: workdir/datasets/videomarathon/manual/train-panda-20250715_oe_sample100k_acc1_hard_check.jsonl
+    sampling_strategy: all

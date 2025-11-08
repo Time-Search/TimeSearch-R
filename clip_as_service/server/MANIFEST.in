@@ -1,0 +1,2 @@
+recursive-include clip_server/resources *
+include clip_server/*.yml

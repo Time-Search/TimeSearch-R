@@ -1,0 +1,15 @@
+jtype: Flow
+version: '1'
+with:
+  port: 51000
+executors:
+  - name: clip_t
+    uses:
+      jtype: CLIPEncoder
+      with:
+        name: /path/to/your/local/siglip-model
+      metas:
+        py_modules:
+          - clip_server.executors.clip_torch
+    timeout_ready: 3000000
+    replicas: 16
