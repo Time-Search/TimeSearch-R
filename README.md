@@ -2,6 +2,12 @@
 
 *A model that learns to actively search for relevant temporal clips through end-to-end reinforcement learning.*
 
+[📄 [Paper](https://arxiv.org/abs/2511.05489)] [🤗 [Model](https://huggingface.co/Time-Search/TimeSearch-R)]
+
+## 📰 News
+
+🔥 **[2025/11/13]** Our [Model Checkpoint](https://huggingface.co/Time-Search/TimeSearch-R) is uploaded!
+
 ## 👁️ Overview
 
 TimeSearch-R reformulates temporal search as interleaved text–video thinking, seamlessly integrating searching video clips into the reasoning process through reinforcement learning (RL).
@@ -45,12 +51,12 @@ python3 -m clip_server
 
 ### 📦️ Dataset & Model
 
-We provide the preprocessed JSON files for [Haystack-LVBench](https://huggingface.co/datasets/). The corresponding `.mp4` video files can be downloaded from [the original LongVideoBench dataset](https://huggingface.co/datasets/longvideobench/LongVideoBench/tree/main).
+We provide the preprocessed JSON files for [Haystack-LVBench](https://huggingface.co/datasets/MLL-Lab/LongVideoHaystack). The corresponding `.mp4` video files can be downloaded from the original [LongVideoBench](https://huggingface.co/datasets/longvideobench/LongVideoBench) dataset.
 
 Download the pre-trained TimeSearch-R model.
 
 ```bash
-huggingface-cli download --resume-download ByteDance/TimeSearch-R --local-dir /path/to/your/local/filedir
+huggingface-cli download --resume-download Time-Search/TimeSearch-R --local-dir /path/to/your/local/filedir
 ```
 
 **(Recommended) Prepare the frame cache and feature cache.**
@@ -131,6 +137,18 @@ We provide the training script for TimeSearch-R with GRPO-CSV in `scripts/train.
 
 ```bash
 bash scripts/train.sh
+```
+
+## 🔖 Citation
+
+If you find TimeSearch-R useful for your research and applications, please cite using this BibTeX:
+```bibtex
+@article{timesearch-r,
+  title={TimeSearch-R: Adaptive Temporal Search for Long-Form Video Understanding via Self-Verification Reinforcement Learning},
+  author={Pan, Junwen and Zhang, Qizhe and Zhang, Rui and Lu, Ming and Wan, Xin and Zhang, Yuan and Liu, Chang and She, Qi},
+  journal={arXiv preprint arXiv:2511.05489},
+  year={2025}
+}
 ```
 
 ## 🎟️ License
